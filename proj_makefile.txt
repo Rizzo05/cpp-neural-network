@@ -1,0 +1,15 @@
+
+CXX = g++
+CXXFLAGS = -std=c++17 -Wall -Wextra
+
+SOURCES = main.cpp Module.cpp LinearLayer.cpp ReLUActivation.cpp Block.cpp NeuralNetwork.cpp
+
+TARGET = neuralnetwork
+
+all: $(TARGET)
+
+$(TARGET): $(SOURCES)
+	$(CXX) $(CXXFLAGS) $(SOURCES) -o $(TARGET)
+
+clean:
+	rm -f $(TARGET)
